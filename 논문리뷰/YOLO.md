@@ -75,7 +75,8 @@
 > $=Pr (Class _{i}) * IOU _{pred}^{truth}$
 
 <br><br>
-### 논문에서의 YOLO 평가
+
+### 4. 논문에서의 YOLO 평가
 - Object Detection Dataset: PASCAL VOC
 ```
 • S(그리드) = 7
@@ -86,4 +87,13 @@
 
 > = 7 × 7 × ((2 × 5) + 20) = 7 × 7 × 30
 
+<br><br>
 
+## Network Design
+
+![image](https://user-images.githubusercontent.com/115753833/228909039-5fd1bf8e-f8c8-4a24-b871-78ae2b9f3b35.png)
+
+- 컨볼루션 신경망으로 구현하고 PASCAL VOC 탐지 데이터 세트에서 평가
+- GoogLeNet 모델에서 영감을 받음 <br>
+&ensp; (차이점: 인셉션 모듈 대신 1 × 1 reduction layers와 그에 뒤따르는 3 × 3 convolutional layers 사용)
+- 24개의 컨볼루션 레이어와 2개의 완전 연결 레이어

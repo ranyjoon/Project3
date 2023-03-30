@@ -1,6 +1,14 @@
 # Project3 : 손 엑스레이 분석을 통한 골 연령 및 키 성장 예측
 <img src="https://user-images.githubusercontent.com/115753833/228257283-e1f854c2-2ca1-4847-baad-8930594c0658.png" width="400">
 
+-----
+## 관련 논문
+
+[TW3](https://github.com/ranyjoon/Project3/blob/main/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/TW3.md): 이미지 추출(OpenCV) 및 라벨링 방법 제시
+
+-----
+<br>
+
 ## 1. 개요
 ### 1) 데이터
  - X-ray 검사 이미지(골 연령 판독 검사 기준)

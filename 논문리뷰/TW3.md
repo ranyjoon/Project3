@@ -88,7 +88,8 @@ TW3 방법에서 사용되는 실제 ROI를 포함하여 손목, 엄지, 중지,
 
 **2. 손목과 손가락에 따라 다른 알고리즘이 적용**
 <img src="https://user-images.githubusercontent.com/115753833/228793728-1f8f2fea-285a-4983-baf9-b008a79ea276.png" width="700">
-<br>
+
+<br><br>
 
 ### STEP 2. bROIs에서 실제 ROI를 추출(CNN적용)
 **Faster R-CNN사용**

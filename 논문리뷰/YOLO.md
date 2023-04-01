@@ -35,6 +35,7 @@
   - **(x, y)**: Bounding box의 중심점이며, grid cell의 범위에 대한 상대값으로 입력
   - **(w, h)**: 전체 이미지의 width, height에 대한 상대값이 입력
   - **confidence**: 예측 box와 실제 정답 사이의 IOU를 의미
+  - 5개의 인자 값들은 모두 (0,1)범위의 값으로 정규화
 
 ```
 • Confidence Score(신뢰도 점수) 

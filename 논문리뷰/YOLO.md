@@ -214,7 +214,7 @@ dropout과 extensive data augmentation 사용
 <br><br>
 
 -----
-## 결론
+## Conclusion
 - YOLO는 객체 감지를 위한 통합 모델이며
 - 모델의 구성이 간단
 - 직접적으로 해당하는 손실 함수에 대해 학습

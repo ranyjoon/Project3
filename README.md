@@ -4,8 +4,8 @@
 -----
 ## 관련 논문
 
-[TW3](https://github.com/ranyjoon/Project3/blob/main/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/TW3.md): 이미지 추출(OpenCV) 및 라벨링 방법 제시
-
+- [TW3](https://github.com/ranyjoon/Project3/blob/main/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/TW3.md): 이미지 추출(OpenCV) 및 라벨링 방법 제시
+- [YOLO](https://github.com/ranyjoon/Project3/blob/main/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/YOLO.md): 이미지 라벨링(객체탐지)
 -----
 <br>
 
@@ -81,7 +81,7 @@
 
 ## 3. 이미지 라벨링
 ### 1) 관절 탐색을 위해 골연령 측정 방법 연구: TW3
-  - [관련 논문](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8660640)
+  - [관련 논문](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8660640) / [논문리뷰 참조](https://github.com/ranyjoon/Project3/blob/main/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/TW3.md)
   - 측정요소: 성별 / 왼손 엄지,중지,소지 뼈 11개 + 손목 뼈 2개
   - 측정방법: 골 성숙점수 산출 → 골 연령 표를 통해 골연령 측정
   - 장점: 골연령표가 0.1년 단위로 구분되므로 정확도가 높고, 객관적 평가가 가능
@@ -97,7 +97,7 @@
 <br>
 
 ### 3) YOLOv5를 활용한 관절 객체 탐지(모델 적용)
-- YOLOv5 관련 논문 참조
+- [YOLO 논문](https://arxiv.org/pdf/1506.02640.pdf) / [논문 리뷰 참조](https://github.com/ranyjoon/Project3/blob/main/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/YOLO.md)
 - **기본값 설정**
   - YOLOx (mAP50: 0.990 / mAP50-95: 0.521)
   - YOLOm (mAP50: 0.991 / mAP50-95: 0.512)

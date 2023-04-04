@@ -14,6 +14,7 @@
 - **객체의 일반화 가능한 표현을 학습**: 예상치 못한 입력에 적용할 때도 실패할 가능성이 적음
 <br>
 
+-----
 ## Unified Detection
 ![image](https://user-images.githubusercontent.com/115753833/228888747-599d4286-668b-429b-afd4-1d08fe92503d.png)
 
@@ -164,6 +165,7 @@ dropout과 extensive data augmentation 사용
 
 <br><br>
 
+-----
 ## Experiments
 
 ### 다른 객체탐지 시스템과의 비교
@@ -211,6 +213,7 @@ dropout과 extensive data augmentation 사용
 
 <br><br>
 
+-----
 ## 결론
 - YOLO는 객체 감지를 위한 통합 모델이며
 - 모델의 구성이 간단

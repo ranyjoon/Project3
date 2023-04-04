@@ -221,3 +221,20 @@ dropout과 extensive data augmentation 사용
 - 전체 모델이 공동으로 학습
 
 **이미지 객체 탐지시 걸리는 시간이 빠르고 성능이 좋은 모델**
+
+<br><br><br><br>
+
+-----
+# YOLO모델의 발전
+
+- **YOLOv1**: 정확도가 너무 낮은 문제가 있었고 이 문제는 **v2**까지 이어짐
+- **YOLOv3**: 엔지니어링적으로 보완, v2보다 살짝 속도는 떨어지더라도 정확도를 대폭 높인 모델
+- **YOLOv4**: YOLOv3에 비해 AP, FPS가 각각 10%, 12% 증가 / 다양한 딥러닝 기법(WRC, CSP ...) 등을 사용해 성능을 향상
+- YOLOv4,**YOLOv5**:
+   - CSPNet 기반의 Backbone(CSPDarkNet53)을 설계
+   - **Backbone**은 이미지로부터 **Feature map을 추출**하는 부분으로, CSP-Darknet를 사용
+   - **Head**는 추출된 Feature map을 바탕으로 **물체의 위치**를 찾는 부분 / predict classes 와 bounding boxes 작업이 수행
+      - Anchor Box(Default Box)를 처음에 설정하고 이를 이용하여 최종적인 Bounding Box를 생성
+      - YOLO v3와 동일하게 3가지의 scale(8 pixel /16 pixel / 32 pixel)에서 바운딩 박스를 생성 + 3개의 앵커박스 = 총 9개의 앵커박스
+   - YOLOv5가 YOLOv4에 비해 낮은 용량과 빠른 속도 (성능은 비슷)
+     

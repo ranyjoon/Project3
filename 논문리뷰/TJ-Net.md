@@ -25,17 +25,31 @@ Attention mechanism, bone age, convolutional neural networks, joint learning
 - 개인의 뼈 성장은 유전학, 호르몬 수준, 식습관, 그리고 대사 장애 등과 같은 많은 다른 요소들에 의해 영향
 - 뼈 나이를 정확하게 추정하는 것은 성장과 관련된 많은 문제를 식별하는 데 중요
 
-🔸 골 연령 측정 기법
-1. the Greulich and Pyle method(GP기법): 일반 방사선 전문의의 판단기법
+<br>
+
+### 1) 골 연령 측정 기법
+
+- **the Greulich and Pyle method(GP기법): 일반 방사선 전문의의 판단기법**
   - X-ray이미지와 유사한 이미지를 시각적으로 검색하여 일치하는 연령을 Atlas에서 검색
   - 기존 Atlas 방식과 개인 판단에 의존
   - 동일한 방사선 사진에서 다른 예측 가능
 
-2. the Tanner and Whitehouse method(TW기법)  
+- **the Tanner and Whitehouse method(TW기법)**
   - 더 구체적인 방법으로 방사선 사진의 특정 부위를 평가
   - 체계적인 점수 매기기를 위한 상세한 특징 집합을 도입하여 계산
 
-➡ 인지 편향적 오류를 줄이기 위해 TW기법 사용
+<br>
 
+➡ **인지 편향적 오류를 줄이기 위해 TW기법 사용**
 
+![image](https://user-images.githubusercontent.com/115753833/229844227-66b9a3ef-d990-4ffc-98af-c760436eb6f3.png)
 
+<br>
+
+### 2) 논문의 골 연령 측정 모델 TJ-Net
+- 연령 그룹 분류에 중요한 특징을 강조하기 위해 attention mechanism 사용
+- 성별과 뼈 연령을 동시에 학습하는 프레임워크
+- 학습된 특징들이 전통적인 아틀라스 기반 평가와 일치, 다른 데이터셋으로 전이 가능
+<br>
+
+&emsp;`전이 학습(transfer learning): 새로운 응용 프로그램이 다른 도메인에서 배운 지식을 활용할 수 있도록 함` 

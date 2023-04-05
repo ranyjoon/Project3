@@ -2,7 +2,7 @@
 
 ✨ [논문 링크](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8660640) ✨
 -----
-### Abstract
+### ABSTRACT
 ```
 딥러닝 기술은 최근 몇 년간 빠르게 발전하였으며, 
 골 연령 평가(BAA)는 딥러닝의 이점을 얻을 수 있는 전형적인 객체감지 및 분류 문제이다.
@@ -11,13 +11,13 @@ Tanner-Whitehouse 3 기법은 소아 및 청소년의 뼈 성숙도를 평가하
 
 * TW3 기법: 13개의 다른 뼈에서 뼈의 양 끝인 골단과 관절주의의 성장 영역을 지역화하여 해당 뼈의 골 연령을 추정하는 방법
 ```
-### Index Trems
+### INDEX TERMS
 Bone age assessment(BAA), deep learning, GP, TW3
 
 -----
 <br>
 
-## Introduction
+## INTRODUCTION
 
 ### 1) TW 골연령 추정 방식
 1.	관심 영역(ROI)을 구성된 손과 손목의 특정한 뼈의 성숙도를 평가
@@ -71,7 +71,7 @@ TW3 방법에서 사용되는 실제 ROI를 포함하여 손목, 엄지, 중지,
 -----
 <br>
 
-## 논문의 이미지 추출 및 CNN 구성 방식
+## METHODLOGY / 논문의 이미지 추출 및 CNN 구성 방식
 ### STEP 1. bROIs추출(OpenCV 적용)
 **1. 원본 이미지의 손목을 수직으로 회전**
 
@@ -123,7 +123,7 @@ TW3 방법에서 사용되는 실제 ROI를 포함하여 손목, 엄지, 중지,
 ```
 <br>
 
-## 논문의 딥러닝 적용 결과
+## EXPERIMENTAL RESULTS / 논문의 딥러닝 적용 결과
 ### 1) Dataset
 **18세 미만 한국 어린이의 왼손 및 손목 X-ray 이미지 3,344개**
 <br>
@@ -133,7 +133,7 @@ X-ray 이미지 = bROI 이미지 4개 + 주석 파일 1개
 ```
 
 
-### 2) Faster R-CNN
+### 2) ROI EXTRACTION DETAILS / Faster R-CNN
 - 검증 데이터셋20% + 학습 데이터 80%
 ```
 • mini-batch size: 256
@@ -143,7 +143,7 @@ X-ray 이미지 = bROI 이미지 4개 + 주석 파일 1개
 • epoch: 30
  ```
  
- ### 3) VGGNet-BA
+ ### 3) TRAINING FOR CLASSIFICATION DETAILS / VGGNet-BA
 - 데이터를 증식하여 사용(검증 데이터셋20% + 학습 데이터 80%)
 ```
 • Optimizer: Adam
@@ -155,20 +155,42 @@ X-ray 이미지 = bROI 이미지 4개 + 주석 파일 1개
 • early stopping 사용
 ```
 
-### 4) 골 연령 예측
+### 4) + 골 연령 예측
 - voting ensemble model
 - 각 ROI마다 다른 골 성숙도 레벨 적용
 <img src="https://user-images.githubusercontent.com/115753833/228816098-f5de6990-1a07-498a-bd7c-9570467072c0.png" width="400">
 <br>
 
-### 5) 최종 결과
+### 5) EVALUATION / 평가
+
+🔸 **ROI EXTRACTION ACCURACY** 
+
+![image](https://user-images.githubusercontent.com/115753833/230099236-853bff36-6e75-4b36-a07d-3f7329075964.png)
+
+&emsp;→ bROI 유무를 통한 추출 결과
+
+<br><br>
+
+🔸 **BA PREDCTION ACCURACY** 
+
+<img src="https://user-images.githubusercontent.com/115753833/228818196-9c559d74-ecb8-4b65-bc9e-be409d1398c4.png" width="33%"><img src="https://user-images.githubusercontent.com/115753833/228819699-477dd588-7bdc-49c0-a7ae-91259d29f67a.png" width="33%"><img src="https://user-images.githubusercontent.com/115753833/228819813-d3fef5cc-8631-445c-a4c9-a9aef7df6ae7.png" width="33%">
+
+&emsp;→ 표 6은 딥러닝 기반 BAA 시스템의 연령대별 MAE와 RMSE <br>
+&emsp;→ 표 7은 개별 ROI의 골격 성숙도에 대한 top-1 및 top-2 예측 정확도 <br>
+&emsp;→ MAE와 RMSE는 모든 연령대와 ROI에서 상대적으로 작고 안정적 <br>
+
+<br><br>
+
+## CONCLUSION
+
+```
+본 논문에서는 딥러닝을 활용한 TW3 기반의 완전 자동화된 뼈나이 판독 시스템을 제안하였다. 
+핵심은 13개의 ROI를 추출하고 해당 ROI의 뼈 성숙도를 분류하는 것이다.  
+첫째, 실제 ROI를 추출하기 위해 탐색해야 하는 영역을 줄이기 위해 bROI의 개념을 도입
+둘째, 작은 회색조 ROI 이미지 내에서 지역적으로 판별적인 특징을 학습하기 위해 직접 제작한 딥러닝 네트워크를 개발
+```
+
 - 약 3,300개의 X-ray 이미지 데이터셋을 기반으로 제안된 딥러닝 기반 뼈나이 판독 시스템의 MAE와 RMSE를 측정
 - 13개의 ROI에 대한 뼈 성숙도의 평균 top-1 및 top-2 예측 정확도는 각각 79.6%와 97.2%
 - 연령 예측에 대한 MAE와 RMSE는 각각 0.46년과 0.62년
 - 실제 데이터와의 1년 이내의 정확도는 97.6%
-
-<img src="https://user-images.githubusercontent.com/115753833/228818196-9c559d74-ecb8-4b65-bc9e-be409d1398c4.png" width="33%"><img src="https://user-images.githubusercontent.com/115753833/228819699-477dd588-7bdc-49c0-a7ae-91259d29f67a.png" width="33%"><img src="https://user-images.githubusercontent.com/115753833/228819813-d3fef5cc-8631-445c-a4c9-a9aef7df6ae7.png" width="33%">
-
-
-
-

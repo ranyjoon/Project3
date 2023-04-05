@@ -226,5 +226,5 @@ TJ-Net에서는 attention module이 인간이 탐색한 초점(focal points)과 
 성별 레이블에 대한 조건부 연령 예측을 향상시키기 위한 Joint sex/age learning이 사용되었다.
 ```
 
-- RSNA 데이터에서 학습한 저수준 특징이 데이터로 전이될 수 있다는 것이 입증
+- RSNA 데이터에서 학습한 저수준 특징이 Tongji데이터로 전이될 수 있다는 것이 입증
 - 제안된 모델은 RSNA와 Tongji 데이터에서 각각 0.41년과 0.36년의 MAD (Mean Absolute Deviation)를 기록

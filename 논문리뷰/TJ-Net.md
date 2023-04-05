@@ -65,7 +65,7 @@ Attention mechanism, bone age, convolutional neural networks, joint learning
 
 ## Proposed Method
 
-### 이 논문에서는 "TJ-Net"이라고 불리는 골 연령 분류 네트워크를 제안한다.
+### 이 논문에서는 "TJ-Net"이라고 불리는 골 연령 분류 네트워크를 제안
 <br>
 
 ![image](https://user-images.githubusercontent.com/115753833/229986979-aef44dcc-57b5-4584-a5f3-d494ef0ce059.png)
@@ -89,7 +89,7 @@ Attention mechanism, bone age, convolutional neural networks, joint learning
 
 <br><br>
 
-### Convolution-based Attention Modules(Block 1,2)
+### 1) Convolution-based Attention Modules(Block 1,2)
 - 앞부분의 컨볼루션 블록에서 감지된 채널 및 공간 특징 중 convolution-filtered features는 뼈 연령을 식별하는 데에 있어서 다양한 중요도를 가짐
 - CBAM의 도입함으로써 채널 및 공간 차원에서 전체 목표와 더 관련이 있는 특징을 강화하는 것이 목적
 - TJ-Net의 각각의 세 CBAM은 순차적으로 channel attention(채널주목) 과 spatial attention(공간주목) 모듈로 구성
@@ -112,7 +112,7 @@ Attention mechanism, bone age, convolutional neural networks, joint learning
 
 <br><br>
 
-### Inception Residual Modules(Block 3,4 + Inception Module)
+### 2) Inception Residual Modules(Block 3,4 + Inception Module)
 
 - Block IncRes1과 IncRes2는 다양한 컨볼루션 커널 크기를 가진 여러 분기로 구성(서로 다른 구조를 가짐)
   - 1 × 1 및 3 × 3 컨볼루션 커널을 결합
@@ -123,7 +123,7 @@ Attention mechanism, bone age, convolutional neural networks, joint learning
 
 <br><br>
 
-### Loss Function for Joint Learning 
+### 3) Loss Function for Joint Learning 
 정확한 성별 입력으로 나이를 정확하게 판단하는 데 도움이 됨 <br>
 → 성별과 뼈 연령 모두의 배치별로 교차 엔트로피를 동시에 최소화함으로써 훈련 데이터에서 P(연령 | 성별, I)를 공동 분배하여 학습 
 

@@ -6,6 +6,7 @@
 
 - [TW3](https://github.com/ranyjoon/Project3/blob/main/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/TW3.md): 이미지 추출(OpenCV) 및 라벨링 방법 제시
 - [YOLO](https://github.com/ranyjoon/Project3/blob/main/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/YOLO.md): 이미지 라벨링(객체탐지)
+- [TJ-Net](https://github.com/ranyjoon/Project3/blob/main/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/TJ-Net.md): 골연령 예측 
 -----
 <br>
 
@@ -117,7 +118,7 @@
 <br>
 
 ### 2) 모델 구축: TJ-Net
-- **TJ-Net관련 논문 참조**
+- **[TJ-Net 논문](https://pdfs.semanticscholar.org/6342/afdefe3ecb2af3706240a6b57108d2534705.pdf) / [논문리뷰](https://github.com/ranyjoon/Project3/blob/main/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/TJ-Net.md)**
   - TJ-Net은 이미지 특징을 학습하면서, 이미지의 특정 영역에 더 많은 중요도를 부여하여 골연령을 측정
   - Self-attention-mechanism:     
     - 상대적 중요도 계산

@@ -90,7 +90,7 @@ Attention mechanism, bone age, convolutional neural networks, joint learning
 <br><br>
 
 ### Convolution-based Attention Modules(Block 1,2)
-- 앞부분의 컨볼루션 블록에서 감지된 채널 및 공간 특징 중 the convolution-filtered features는 뼈 연령을 식별하는 데에 있어서 다양한 중요도를 가짐
+- 앞부분의 컨볼루션 블록에서 감지된 채널 및 공간 특징 중 convolution-filtered features는 뼈 연령을 식별하는 데에 있어서 다양한 중요도를 가짐
 - CBAM의 도입함으로써 채널 및 공간 차원에서 전체 목표와 더 관련이 있는 특징을 강화하는 것이 목적
 - TJ-Net의 각각의 세 CBAM은 순차적으로 channel attention(채널주목) 과 spatial attention(공간주목) 모듈로 구성
 
